@@ -1,0 +1,20 @@
+version: '3.7'
+
+services:
+  permestore-engine:
+    image: junekimdev/permestore-calculator:1.0-alpine
+    container_name: permestore-calculator
+    restart: unless-stopped
+    env_file:
+      - .env
+    expose:
+      - 3000
+    networks:
+      - nginx-proxy
+      - backend
+
+networks:
+  nginx-proxy:
+    external: true
+  backend:
+    external: true
