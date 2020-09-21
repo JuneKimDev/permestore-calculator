@@ -1,0 +1,42 @@
+@import '../theme';
+
+.footer {
+  width: 100%;
+  margin-top: auto;
+  @include var(color, footer-font-color);
+  @include var(background-color, footer-bg-color);
+
+  &__container {
+    width: 100%;
+    height: 100px;
+    display: flex;
+  }
+
+  &__engine {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 8px;
+
+    &--logo {
+      width: 2em;
+      height: 2em;
+    }
+
+    a,
+    a:link,
+    a:visited {
+      text-decoration: underline;
+      @include var(color, footer-font-color);
+    }
+    a:hover {
+      text-decoration: none;
+      color: white;
+    }
+
+    span {
+      padding: 4px 8px;
+    }
+  }
+}

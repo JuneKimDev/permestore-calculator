@@ -4,7 +4,7 @@ import { IMeta } from '../../types';
 
 const Meta = (props: IMeta) => {
   const orgName = 'JuneKimDev';
-  const siteName = 'Great App';
+  const siteName = 'Permestore Calculator';
   const homeUrl = process.env.PUBLIC_URL || 'localhost:3000';
   const {
     image = `${homeUrl}/assets/images/LogoPlace_Extended_1200x627.png`,

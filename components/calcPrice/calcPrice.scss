@@ -1,0 +1,178 @@
+@import '../theme';
+
+.calcPrice {
+  width: 100%;
+
+  &__container {
+    width: 100%;
+    display: grid;
+    grid-template:
+      'input input input settings' auto
+      'chart inside inside settings' auto /
+      1fr 1fr 1fr 1fr;
+  }
+
+  &__wrapper {
+    &--input {
+      grid-area: input;
+      width: 100%;
+      padding: 16px;
+      display: grid;
+      grid-template:
+        'title title inputBtn' auto
+        'input1 input2 input3' auto
+        '. . recommend' auto /
+        1fr 1fr 1fr;
+      gap: 8px;
+    }
+
+    &--settings {
+      grid-area: settings;
+      width: 100%;
+      padding: 16px;
+      background-color: #e0e0e0;
+    }
+
+    &--chart {
+      grid-area: chart;
+      width: 100%;
+    }
+
+    &--inside {
+      grid-area: inside;
+      width: 100%;
+      padding: 16px;
+      display: grid;
+      grid-template:
+        '. left right .' auto
+        '. bottom bottom .' auto
+        '. . . .' 1fr /
+        1fr auto auto 1fr;
+      gap: 20px;
+    }
+  }
+
+  &__title {
+    grid-area: title;
+  }
+
+  &__priceRecommend {
+    grid-area: recommend;
+    margin: 0;
+    color: red;
+  }
+
+  &__btn {
+    &--red {
+      background-color: $dark-red;
+    }
+
+    &--inputReset {
+      grid-area: inputBtn;
+      justify-self: end;
+      align-self: center;
+    }
+    &--inputReset,
+    &--settingsEdit,
+    &--settingsDone,
+    &--settingsReset {
+      width: 80px;
+      height: 20px;
+      font-size: 1em;
+    }
+  }
+
+  &__input {
+    width: 100%;
+    display: grid;
+    grid-template:
+      'inputLabel inputLabel' auto
+      'inputBox inputUnit' auto /
+      auto 16px;
+    column-gap: 8px;
+    align-items: center;
+
+    label {
+      grid-area: inputLabel;
+      padding: 4px;
+    }
+
+    input {
+      grid-area: inputBox;
+      width: 100%;
+      margin-right: 4px;
+      font-size: 1.5em;
+    }
+
+    span {
+      grid-area: inputUnit;
+    }
+  }
+
+  &__settingsBtns {
+    display: flex;
+    justify-content: flex-end;
+
+    button {
+      margin-left: 8px;
+    }
+  }
+
+  &__settings {
+    width: 100%;
+
+    &--single {
+      display: flex;
+      align-items: center;
+    }
+
+    &--name::after {
+      content: ' :';
+    }
+
+    &--input {
+      width: 10ch;
+      height: 1.5em;
+      margin-left: 8px;
+    }
+
+    &--value,
+    &--unit {
+      margin-left: 8px;
+    }
+  }
+
+  &__inside {
+    &--left {
+      grid-area: left;
+    }
+
+    &--right {
+      grid-area: right;
+    }
+    &--bottom {
+      grid-area: bottom;
+    }
+
+    &--single {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    &--name {
+      width: 15ch;
+      margin: 0;
+    }
+
+    &--value {
+      width: 10ch;
+      margin: 0 0 0 8px;
+      text-align: end;
+    }
+
+    &--unit {
+      margin: 0 0 0 8px;
+    }
+  }
+}
