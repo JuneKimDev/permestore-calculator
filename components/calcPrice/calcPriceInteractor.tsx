@@ -79,6 +79,8 @@ const interactor = () => {
   const onMyPriceChange = (e: ChangeEvent<HTMLInputElement>) =>
     dispatch(price.action.setMyPrice(parseInt(e.target.value)));
 
+  const onAcceptPriceClick = (e: MouseEvent<HTMLButtonElement>) =>
+    dispatch(price.action.setMyPrice(priceRecommend));
   const onResetPriceClick = (e: MouseEvent<HTMLButtonElement>) =>
     dispatch(price.action.resetPrice());
   const onEditClick = (e: MouseEvent<HTMLButtonElement>) =>
@@ -110,6 +112,7 @@ const interactor = () => {
         isEditSettings,
         priceRecommend,
         inside,
+        onAcceptPriceClick,
         onResetPriceClick,
         onEditClick,
         onDoneClick,

@@ -56,8 +56,13 @@
     grid-area: title;
   }
 
-  &__priceRecommend {
+  &__recommend {
     grid-area: recommend;
+    display: flex;
+    align-items: center;
+  }
+
+  &__priceRecommend {
     margin: 0;
     color: red;
   }
@@ -67,6 +72,14 @@
       background-color: $dark-red;
     }
 
+    &--acceptPrice {
+      width: 40px;
+      height: 1em;
+      margin-left: 4px;
+      font-size: 0.7em;
+      padding: 8px;
+      border-radius: 4px;
+    }
     &--inputReset {
       grid-area: inputBtn;
       justify-self: end;

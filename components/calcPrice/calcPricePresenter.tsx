@@ -21,6 +21,7 @@ const presenter = (props: {
   isEditSettings: boolean;
   priceRecommend: number;
   inside: ICalculation;
+  onAcceptPriceClick: (e: MouseEvent<HTMLButtonElement>) => void;
   onResetPriceClick: (e: MouseEvent<HTMLButtonElement>) => void;
   onEditClick: (e: MouseEvent<HTMLButtonElement>) => void;
   onDoneClick: (e: MouseEvent<HTMLButtonElement>) => void;
@@ -34,6 +35,7 @@ const presenter = (props: {
     isEditSettings,
     priceRecommend,
     inside,
+    onAcceptPriceClick,
     onResetPriceClick,
     onEditClick,
     onDoneClick,
@@ -74,9 +76,17 @@ const presenter = (props: {
             onChange={onMyPriceChange}
             unit="원"
           />
-          <p className="calcPrice__priceRecommend">{`추천 판매가: ${formatNumberKRW(
-            priceRecommend,
-          )}`}</p>
+          <div className="calcPrice__recommend">
+            <p className="calcPrice__priceRecommend">{`추천 판매가: ${formatNumberKRW(
+              priceRecommend,
+            )}`}</p>
+            <button
+              className="btn calcPrice__btn--acceptPrice calcPrice__btn--blue"
+              onClick={onAcceptPriceClick}
+            >
+              ACCEPT
+            </button>
+          </div>
         </div>
         <div className="calcPrice__wrapper--settings">
           <div className="calcPrice__settingsBtns">
