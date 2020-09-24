@@ -12,7 +12,7 @@ const view = (props: { costOfGoods: number; marginEarningDiff: number; earning: 
     ['매입원가', costOfGoods],
   ];
   const chartOption = {
-    title: '매출 구조 차트',
+    title: '매출의 구성',
     titleTextStyle: { color: '#ffffff' },
     backgroundColor: '#303030',
     legend: 'none',
