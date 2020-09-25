@@ -13,7 +13,7 @@ const initialSettings: ICalcSettings = {
   naverShoppingFeeRate: 2,
   otherFeeRate: 0,
   vatRate: 0, // profit less than 2,400만원
-  incomeTaxRate: 0.84, // 14% * 6% = 0.84% according to Korean Income Tax Law 2019
+  incomeTaxRate: 0.858, // 14.3% * 6% = 0.858% according to Korean Income Tax Law 2019
   liabilityProvisionsRate: 1,
   directDiscount: 0,
   adfee: 0,
